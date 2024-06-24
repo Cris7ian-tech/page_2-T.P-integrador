@@ -1,0 +1,154 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #70163C;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
+.section {
+    background-color: #fffefe;
+    display: grid;
+
+    width: 90%;
+    margin: 0 auto;
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, max-content);
+    
+    grid-template-areas: 
+    "img" 
+    "intro" 
+    "img-1" 
+    "info" 
+    "img-2"; 
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 60px 0;
+}
+
+.section__albun {
+    background-image: url(assets/frame-5.jpg);
+
+    grid-area: img;    
+    min-height: 500px;
+    background-size: cover;
+    background-position: center; 
+}
+
+.controles {
+    grid-area: img;
+    align-self: self-end;
+    justify-self: end;
+    
+}
+.section__control {
+    background-color: #307351;
+    width: 100px;
+    height: 50px;
+    
+}
+
+.section__intro {
+    width: 90%;
+    grid-area: intro;
+
+}
+
+.section__contenido__intro {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section__titulo__intro {
+    color: black;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.section__parrafo__intro {
+    line-height: 1.5;
+    margin: 1rem 0 2rem;
+    color: rgb(94, 94, 91);
+}
+
+.section__albun__uno {
+    grid-area: img-1;
+    min-height: 250px;
+    height: 100%;
+    background-image: url(assets/grid-galeri-13.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+.section__informacion {
+    width: 90%;
+    grid-area: info;
+}
+
+.section__contenido__informacion {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section__titulo__informacion {
+    color: black;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.section__parrafo__informacion {
+    line-height: 1.5;
+    margin: 1rem 0 2rem;
+    color: rgb(94, 94, 91)
+}
+
+.section__albun__dos {
+    grid-area: img-2;
+    min-height: 250px;
+    height: 100%;
+    background-image: url(assets/grid-galeri-14.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+/* Ojala quede */
+
+@media (min-width: 768px){
+    .container{
+        width: 85%;
+        padding: 70px;
+
+    }
+    .section {
+        grid-template-columns: repeat(7,1fr);
+        grid-template-areas: 
+        "intro intro intro img img img img"
+        "intro intro intro img img img img"
+        "intro intro intro img img img img"
+        "img-1 img-1 img-1 info info img-2 img-2"
+        "img-1 img-1 img-1 info info img-2 img-2";
+    }
+}
+
